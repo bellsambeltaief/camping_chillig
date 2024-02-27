@@ -66,9 +66,11 @@ flutter:
    - assets/images/
    - assets/images/explore.png
    - assets/images/camping.png
+   - assets/images/fire.png
    - assets/gifs/
    - assets/gifs/vanlife.gif
    - assets/gifs/camper.gif
+   
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

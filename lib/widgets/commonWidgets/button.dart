@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class Button extends StatelessWidget {
   static String routeName = "/Button";
   final String? text;
+  final void Function()? onPressed;
   const Button({
     super.key,
     this.text,
+    this.onPressed,
   });
 
   @override
@@ -20,7 +22,7 @@ class Button extends StatelessWidget {
         color: Color.fromARGB(255, 197, 50, 5),
       ),
       child: GestureDetector(
-        onTap: () {},
+        onTap: onPressed,
         child: Center(
           child: Text(
             text ?? '',

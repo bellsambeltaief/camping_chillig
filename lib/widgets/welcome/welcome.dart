@@ -1,5 +1,7 @@
 import 'package:camping_chillig/tools/gifs.dart';
 import 'package:camping_chillig/widgets/commonWidgets/button.dart';
+import 'package:camping_chillig/widgets/sign/sign_in.dart';
+import 'package:camping_chillig/widgets/sign/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -39,12 +41,12 @@ class _WelcomeState extends State<Welcome> {
                   ),
                   color: Colors.grey.withOpacity(0.5),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           "WELCOME",
                           style: TextStyle(
                             color: Colors.white,
@@ -52,8 +54,8 @@ class _WelcomeState extends State<Welcome> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 20),
-                        Text(
+                        const SizedBox(height: 20),
+                        const Text(
                           "START YOUR JOURNEY",
                           textAlign: TextAlign.center,
                           style: TextStyle(
@@ -62,13 +64,27 @@ class _WelcomeState extends State<Welcome> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 40),
+                        const SizedBox(height: 40),
                         Button(
                           text: "LOG IN",
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const SignIn(),
+                              ),
+                            );
+                          },
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Button(
                           text: "SIGN UP",
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const SignUp(),
+                              ),
+                            );
+                          },
                         ),
                       ],
                     ),
